@@ -106,7 +106,6 @@ app.MapGet("/error", () =>
 
 # 🛠 Désactivation du Lancement Automatique du Navigateur
 Pour désactiver le lancement automatique du navigateur, modifiez le fichier launchSettings.json :
-Switch cette ligne sur false : 
 ```json
 "launchBrowser": false,
 ```
