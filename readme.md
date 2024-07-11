@@ -147,8 +147,8 @@ Code complet :
 ```
 
 # 🎉 Voilà !
-Vous avez maintenant configuré Serilog dans votre projet ASP.NET Core.
-Vous pouvez tester la journalisation en accédant aux endpoints définis ici `Logging_SERILOG.http` et vérifier les fichiers de log générés dans le répertoire Logs.
+Vous avez maintenant configuré Serilog dans votre projet ASP.NET Core.  
+Vous pouvez tester la journalisation en accédant aux endpoints définis dans le fichier => `Logging_SERILOG.http` et vérifier les fichiers de log générés dans le répertoire Logs.
 
 Docu officiel de SERILOG :  
 https://serilog.net
