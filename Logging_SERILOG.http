@@ -1,0 +1,20 @@
+@Logging_SERILOG_HostAddress = http://localhost:5091
+
+
+
+
+
+
+
+// PREMIERE REQUETE
+
+GET {{Logging_SERILOG_HostAddress}}/
+
+###
+
+
+// SECONDE REQUETE
+
+GET {{Logging_SERILOG_HostAddress}}/error
+
+###
