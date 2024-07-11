@@ -57,17 +57,17 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-Log.Logger = new LoggerConfiguration()
+Log.Logger = new LoggerConfiguration() // <-----
     .ReadFrom.Configuration(builder.Configuration)
     .CreateLogger();
 
-builder.Host.UseSerilog();
+builder.Host.UseSerilog(); // <-----
 
 var app = builder.Build();
 
 app.UseSerilogRequestLogging(); // <-----
 
-try
+try // <-----
 {
     // Journalisez un message d'info
     Log.Information("Starting web application");
