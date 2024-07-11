@@ -91,8 +91,17 @@ finally
 Ajoutez deux endpoints dans votre application pour tester la journalisation :
 
 ```c#
-app.MapGet("/", () => "Hello World!");
-app.MapGet("/error", () => throw new Exception("Simulated exception"));
+app.MapGet("/", () =>
+{
+    Log.Information("Je log l'info que le endpoint à été call");
+    return TypedResults.Ok(new { Message = "Hello, World!"} );
+});
+
+app.MapGet("/error", () =>
+{
+    Log.Error("Je log une erreur car l'utilisateur à tenter un truc interdit :O");
+    return TypedResults.BadRequest(new { Message = "Pas d'inspiration .." });
+});
 ```
 
 # 🛠 Désactivation du Lancement Automatique du Navigateur
