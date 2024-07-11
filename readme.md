@@ -1,8 +1,8 @@
-# Setup de Serilog en Quelques Minutes ??
+# Setup de Serilog en Quelques Minutes ðŸš€
 
-Ce guide vous expliquera comment configurer **Serilog** dans votre projet ASP.NET Core en quelques étapes simples. Avec Serilog, vous pouvez facilement gérer et personnaliser vos journaux de log.
+Ce guide vous expliquera comment configurer **Serilog** dans votre projet ASP.NET Core en quelques Ã©tapes simples. Avec Serilog, vous pouvez facilement gÃ©rer et personnaliser vos journaux de log.
 
-## ?? Packages à Installer
+## ðŸ“¦ Packages Ã  Installer
 
 Commencez par installer les trois packages suivants :
 
@@ -13,7 +13,7 @@ dotnet add package Serilog.Sinks.Console
 ```
 
 
-# ?? Configuration de appsettings.json
+# ðŸ”§ Configuration de appsettings.json
 
 ```json
 {
@@ -49,7 +49,7 @@ dotnet add package Serilog.Sinks.Console
 }
 ```
 
-# ?? Configuration de Program.cs
+# âš™ï¸ Configuration de Program.cs
 Mettez en place le setup de Serilog dans votre fichier Program.cs :
 
 ```c#
@@ -72,13 +72,13 @@ try
     // Journalisez un message d'info
     Log.Information("Starting web application");
 
-    // Exécutez l'application
+    // ExÃ©cutez l'application
     app.Run();
 }
 catch (Exception ex)
 {
     // Journalisez un message "Fatal" avec l'exception
-    Log.Fatal(ex, "Application à planter");
+    Log.Fatal(ex, "Application Ã  planter");
 }
 finally
 {
@@ -87,7 +87,7 @@ finally
 }
 ```
 
-# ?? Création d'Endpoints Minimal API pour la Démo
+# ðŸŒ CrÃ©ation d'Endpoints Minimal API pour la DÃ©mo
 Ajoutez deux endpoints dans votre application pour tester la journalisation :
 
 ```c#
@@ -95,8 +95,8 @@ app.MapGet("/", () => "Hello World!");
 app.MapGet("/error", () => throw new Exception("Simulated exception"));
 ```
 
-# ?? Désactivation du Lancement Automatique du Navigateur
-Pour désactiver le lancement automatique du navigateur, modifiez le fichier launchSettings.json :
+# ðŸ›  DÃ©sactivation du Lancement Automatique du Navigateur
+Pour dÃ©sactiver le lancement automatique du navigateur, modifiez le fichier launchSettings.json :
 Switch cette ligne sur false : `"launchBrowser": false,`
 
 Code complet : 
@@ -135,8 +135,11 @@ Code complet :
 }
 ```
 
-# ?? Voilà !
-Vous avez maintenant configuré Serilog dans votre projet ASP.NET Core.
-Vous pouvez tester la journalisation en accédant aux endpoints définis ici `Logging_SERILOG.http` et vérifier les fichiers de log générés dans le répertoire Logs.
+# ðŸŽ‰ VoilÃ  !
+Vous avez maintenant configurÃ© Serilog dans votre projet ASP.NET Core.
+Vous pouvez tester la journalisation en accÃ©dant aux endpoints dÃ©finis ici `Logging_SERILOG.http` et vÃ©rifier les fichiers de log gÃ©nÃ©rÃ©s dans le rÃ©pertoire Logs.
+
+Docu officiel de SERILOG :  
+https://serilog.net
 
 
