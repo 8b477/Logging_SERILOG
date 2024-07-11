@@ -53,7 +53,7 @@ dotnet add package Serilog.Sinks.Console
 Mettez en place le setup de Serilog dans votre fichier Program.cs :
 
 ```c#
-using Serilog;
+using Serilog; // <-----
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -106,7 +106,10 @@ app.MapGet("/error", () =>
 
 # 🛠 Désactivation du Lancement Automatique du Navigateur
 Pour désactiver le lancement automatique du navigateur, modifiez le fichier launchSettings.json :
-Switch cette ligne sur false : `"launchBrowser": false,`
+Switch cette ligne sur false : 
+```json
+"launchBrowser": false,
+```
 
 Code complet : 
 
